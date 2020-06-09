@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ ! -f "web/admin/cli/cron.php" ]; then
-    git clone --progress -b "${MOODLE_VERSION}" --single-branch --depth 1 -j 4 git://git.moodle.org/moodle.git /tmp/moodle
+    git clone --progress -b "${MOODLE_VERSION}" --single-branch --depth 1 git://git.moodle.org/moodle.git /tmp/moodle
     rsync -r /tmp/moodle/ web
     rm -rf /tmp/moodle
     cp web/config-dist.php web/config.php
